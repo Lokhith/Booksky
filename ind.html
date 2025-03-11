@@ -6,37 +6,46 @@
   <title>Booksky</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class = "navbar">
+  <header class="navbar" role="banner">
     <h1>Booksky</h1>
-  </div>
+  </header>
 
-  <div class = "container">
-    <div class = "book-container">
-      <h2>Book Name</h2>
-      <h5>Author Name</h5>
-      <p>A brief overview of the book</p>
-      <button onClick = "deletebook(event)">Delete</button>
-    </div>
-  </div>
+  <main class="container" role="main">
+    <section class="book-container" role="region" aria-label="Book Details">
+      <article>
+        <h2>Book Name</h2>
+        <h5>Author Name</h5>
+        <p>A brief overview of the book</p>
+        <button type="button" onClick="deletebook(event)">Delete</button>
+      </article>
+    </section>
+  </main>
+
+  <div class="popup-overlay" role="presentation"></div>
   
-  <div class = "popup-overlay"></div>
-  <div class = "popup-box">
-    <h2>Add Book</h2>
+  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="add-book-heading">
+    <h2 id="add-book-heading">Add Book</h2>
     <form>
-      <input type = "text" placeholder = "Book Title" id = "book-title-input">
-      <input type = "text" placeholder = "Book Author" id = "book-author-input">
-      <textarea placeholder = "Short Description" id = "book-description-input"></textarea>
-      <button id = "add-book">ADD</button>
-      <button id = "cancel-popup">CANCEL</button>
+      <label for="book-title-input" class="visually-hidden">Book Title</label>
+      <input type="text" placeholder="Book Title" id="book-title-input" required>
+
+      <label for="book-author-input" class="visually-hidden">Book Author</label>
+      <input type="text" placeholder="Book Author" id="book-author-input" required>
+
+      <label for="book-description-input" class="visually-hidden">Short Description</label>
+      <textarea placeholder="Short Description" id="book-description-input" required></textarea>
+
+      <button type="submit" id="add-book">ADD</button>
+      <button type="button" id="cancel-popup">CANCEL</button>
     </form>
   </div>
-  
-  <button class = "add-button" id = "add-popup-button">+</button>
 
-  <script src = "script.js"></script>
+  <button class="add-button" id="add-popup-button" aria-label="Add new book">+</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
