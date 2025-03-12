@@ -7,76 +7,84 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #f0f2f5;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px 40px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .navbar h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  color: #333;
+  color: #2c3e50;
 }
 
 /* Container */
 .container {
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 960px;
+  margin: 50px auto;
   padding: 20px;
 }
 
 /* Book Container */
 .book-container {
-  background-color: #fff;
-  padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e5e5;
 }
 
 .book-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .book-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
 .book-container h5 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  color: #666;
-  margin-bottom: 12px;
+  color: #7f8c8d;
+  margin-bottom: 16px;
 }
 
 .book-container p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .book-container button {
   background-color: #e74c3c;
   color: #fff;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .book-container button:hover {
   background-color: #c0392b;
+  transform: scale(1.05);
 }
 
 /* Popup Styles */
@@ -97,32 +105,34 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
   display: none;
   z-index: 100;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 .popup-box h2 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  color: #34495e;
 }
 
 .popup-box input,
 .popup-box textarea {
   width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 18px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
+  background-color: #fdfdfd;
 }
 
 .popup-box button {
-  padding: 10px 16px;
+  padding: 10px 20px;
   margin-right: 10px;
   border: none;
   border-radius: 6px;
@@ -162,8 +172,8 @@ body {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .add-button:hover {
@@ -171,6 +181,7 @@ body {
   transform: scale(1.1);
 }
 
+/* Accessibility */
 .visually-hidden {
   position: absolute;
   width: 1px;
